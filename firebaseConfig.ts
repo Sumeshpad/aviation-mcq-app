@@ -1,15 +1,16 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import "dotenv/config";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDN4k9yizuZSxduvGFEFYZ9vhacHVOLN08",
-    authDomain: "aviation-mcq-app.firebaseapp.com",
-    projectId: "aviation-mcq-app",
-    storageBucket: "aviation-mcq-app.firebasestorage.app",
-    messagingSenderId: "122681192357",
-    appId: "1:122681192357:web:b9afe321cdc20766b9c24c"
-  };
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_API_KEY,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
